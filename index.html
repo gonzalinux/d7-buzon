@@ -5,15 +5,50 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Buzon de sugerencias</title>
+    <link href="index.css" rel="stylesheet">
 </head>
 <body>
 
-<form method="POST" >
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname"><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname">
-</form>
-
+<div class="login-page">
+    <div class="form" >
+        <form class="login-form showOrNot" id="login-form">
+            <input type="text" placeholder="Mod name" id="modName" required/>
+            <input type="password" placeholder="Contraseña" id="pass" required/>
+            <button>Login</button>
+            <p class="message">¿No eres mod? <a href="#" id="volver">Volver</a></p>
+        </form>
+        <form class="send-form" id="send-form">
+            <input type="text" placeholder="Nombre (opcional)" id="nombre"/>
+            <select name="cat" id="cat" >
+                <option selected disabled hidden value="">
+                    Categoría
+                </option>
+                <option value="No estoy seguro">
+                    No estoy seguro
+                </option>
+                <option value="Organización del server">
+                    Organización del server
+                </option>
+                <option value="Problema con alguien">
+                    Problema con alguien
+                </option>
+                <option value="Problema con mods">
+                    Problema con mods
+                </option>
+                <option value="Sugerencia de mejora">
+                    Sugerencia de mejora
+                </option>
+                <option value="Solo quería probar">
+                    Solo quería probar
+                </option>
+            </select>
+            <input type="text" placeholder="Titulo" id="titulo"/>
+            <textarea name="Desc"  placeholder="Descripción" cols="40" rows="5" id="descripcion" required></textarea>
+            <button>Enviar</button>
+            <p class="message">¿Eres mod? <a href="#" id="Accede">Accede</a></p>
+        </form>
+    </div>
+</div>
+<script src="index.js" defer></script>
 </body>
 </html>
