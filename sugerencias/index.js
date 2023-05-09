@@ -12,7 +12,7 @@ async function fillCosas(){
             "Authorization": token
         },
     });
-    alert("AKI")
+
     if(response.status!==200){
         console.log(response.status)
         alert("Fallo de autentificacion");
@@ -21,8 +21,6 @@ async function fillCosas(){
 
     }
     const cosos = await response.json();
-
-
     for(let coso of cosos){
     container.innerHTML += `
     <div class="sugerencia">
@@ -32,7 +30,10 @@ async function fillCosas(){
             <h5 class="ip">IP: <b>${coso.ip}</b></h5>
 
         </div>
-        <h2 class="titulo">Titulo: <b>${coso.titulo}</b></h2>
+        <div class="secondRow">
+            <h2 class="titulo">Titulo: <b>${coso.titulo}</b></h2>
+            <h3 class="fecha">${coso.date}</h3>
+        </div>
         <p class="descripcion">${coso.descripcion}</p>
     </div>
     `

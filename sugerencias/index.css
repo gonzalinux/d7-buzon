@@ -43,4 +43,27 @@ body {
     padding-bottom: 2%;
     font-weight: normal;
 }
+.fecha{
+    flex: 1 1 auto;
+    text-align: right;
+}
+.secondRow{
+    display: inline-flex;
+    width: 100%;
+}
+a{
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    position: absolute;
+    outline: 0;
+    background: rgb(215, 84, 244);;
+    width: min-content;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    left: 2%;
+    top: 50%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
 
